@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров | Апорт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <h1><span>А</span>порт</h1>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="active">Товары</a></li>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#services">Услуги</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="index.html#auth" class="btn" id="login-btn"><i class="fas fa-user"></i> Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Каталог товаров -->
+    <section class="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Каталог товаров</h2>
+                <p>Лучшие товары для ваших питомцев</p>
+            </div>
+            
+            <div class="catalog-content">
+                <!-- Фильтры -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="catalog.html" class="active">Все товары</a></li>
+                            <li><a href="catalog.html?category=food">Питание</a></li>
+                            <li><a href="catalog.html?category=clothes">Одежда</a></li>
+                            <li><a href="catalog.html?category=accessories">Аксессуары</a></li>
+                            <li><a href="catalog.html?category=health">Здоровье</a></li>
+                            <li><a href="catalog.html?category=toys">Игрушки</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Цена</h3>
+                        <div class="price-range">
+                            <input type="range" min="0" max="10000" value="5000" class="slider" id="price-range">
+                            <div class="price-values">
+                                <span>0 руб.</span>
+                                <span>10000 руб.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Размер</h3>
+                        <div class="size-filters">
+                            <label class="size-option">
+                                <input type="checkbox"> Маленький
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox"> Средний
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox"> Большой
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn apply-filters">Применить фильтры</button>
+                </div>
+                
+                <!-- Товары -->
+                <div class="products-grid">
+                    <!-- Товар 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Корм для собак">
+                            <div class="product-badge">Хит</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Корм для собак "Премиум"</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                            <p class="price">1 200 руб.</p>
+                            <p class="old-price">1 500 руб.</p>
+                            <button class="btn add-to-cart" data-id="1" data-name="Корм для собак 'Премиум'" data-price="1200" data-image="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Товар 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Ошейник">
+                            <div class="product-badge">Новинка</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Кожаный ошейник</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(18)</span>
+                            </div>
+                            <p class="price">850 руб.</p>
+                            <button class="btn add-to-cart" data-id="2" data-name="Кожаный ошейник" data-price="850" data-image="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Товар 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80" alt="Игрушка">
+                        </div>
+                        <div class="product-info">
+                            <h3>Резиновая игрушка "Кость"</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(32)</span>
+                            </div>
+                            <p class="price">350 руб.</p>
+                            <button class="btn add-to-cart" data-id="3" data-name="Резиновая игрушка 'Кость'" data-price="350" data-image="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Товар 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Комбинезон">
+                            <div class="product-badge">-20%</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Теплый комбинезон</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>(15)</span>
+                            </div>
+                            <p class="price">1 500 руб.</p>
+                            <p class="old-price">1 900 руб.</p>
+                            <button class="btn add-to-cart" data-id="4" data-name="Теплый комбинезон" data-price="1500" data-image="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Товар 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1568572933382-74d440642017?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Миска">
+                        </div>
+                        <div class="product-info">
+                            <h3>Двойная миска на подставке</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(21)</span>
+                            </div>
+                            <p class="price">1 100 руб.</p>
+                            <button class="btn add-to-cart" data-id="5" data-name="Двойная миска на подставке" data-price="1100" data-image="https://images.unsplash.com/photo-1568572933382-74d440642017?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Товар 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1554692915-e5ef8f7e0cca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Шампунь">
+                        </div>
+                        <div class="product-info">
+                            <h3>Шампунь для собак</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(27)</span>
+                            </div>
+                            <p class="price">600 руб.</p>
+                            <button class="btn add-to-cart" data-id="6" data-name="Шампунь для собак" data-price="600" data-image="https://images.unsplash.com/photo-1554692915-e5ef8f7e0cca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <!-- Тот же подвал, что на главной -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

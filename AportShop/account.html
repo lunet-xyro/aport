@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Апорт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <!-- Та же шапка, что на главной -->
+    </header>
+
+    <!-- Личный кабинет -->
+    <section class="account">
+        <div class="container">
+            <div class="account-header">
+                <h2>Личный кабинет</h2>
+                <p>Добро пожаловать, <span id="user-name">Иван Иванов</span>!</p>
+            </div>
+            
+            <div class="account-content">
+                <div class="account-sidebar">
+                    <div class="account-info">
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 id="sidebar-user-name">Иван Иванов</h3>
+                        <p><i class="fas fa-envelope"></i> ivan@example.com</p>
+                        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                        <button class="btn edit-profile">Редактировать</button>
+                    </div>
+                    
+                    <nav class="account-menu">
+                        <ul>
+                            <li class="active"><a href="#" data-tab="profile"><i class="fas fa-user"></i> Профиль</a></li>
+                            <li><a href="#" data-tab="orders"><i class="fas fa-shopping-bag"></i> Мои заказы</a></li>
+                            <li><a href="#" data-tab="pets"><i class="fas fa-paw"></i> Мои питомцы</a></li>
+                            <li><a href="#" data-tab="appointments"><i class="fas fa-calendar-alt"></i> Записи на услуги</a></li>
+                            <li><a href="#" data-tab="settings"><i class="fas fa-cog"></i> Настройки</a></li>
+                            <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Выйти</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="account-main">
+                    <!-- Профиль -->
+                    <div class="account-tab active" id="profile-tab">
+                        <h3>Личные данные</h3>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="account-first-name">Имя</label>
+                                    <input type="text" id="account-first-name" value="Иван" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="account-last-name">Фамилия</label>
+                                    <input type="text" id="account-last-name" value="Иванов" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="account-email">Email</label>
+                                <input type="email" id="account-email" value="ivan@example.com" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="account-phone">Телефон</label>
+                                <input type="tel" id="account-phone" value="+7 (999) 123-45-67" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="account-address">Адрес</label>
+                                <input type="text" id="account-address" value="г. Москва, ул. Примерная, д. 10" disabled>
+                            </div>
+                            
+                            <button type="button" class="btn save-profile" style="display:none;">Сохранить</button>
+                        </form>
+                        
+                        <h3>Мои питомцы</h3>
+                        <div class="pets-list">
+                            <div class="pet-card">
+                                <i class="fas fa-dog"></i>
+                                <div class="pet-info">
+                                    <h4>Бобик</h4>
+                                    <p>Лабрадор, 3 года</p>
+                                </div>
+                                <button class="btn edit-pet"><i class="fas fa-edit"></i></button>
+                            </div>
+                            
+                            <div class="pet-card">
+                                <i class="fas fa-cat"></i>
+                                <div class="pet-info">
+                                    <h4>Мурка</h4>
+                                    <p>Британская, 2 года</p>
+                                </div>
+                                <button class="btn edit-pet"><i class="fas fa-edit"></i></button>
+                            </div>
+                            
+                            <button class="btn add-pet"><i class="fas fa-plus"></i> Добавить питомца</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Заказы -->
+                    <div class="account-tab" id="orders-tab">
+                        <h3>История заказов</h3>
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Заказ #12345</h4>
+                                        <p>15 октября 2023</p>
+                                    </div>
+                                    <span class="order-status completed">Выполнен</span>
+                                </div>
+                                
+                                <div class="order-products">
+                                    <div class="product">
+                                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Корм">
+                                        <div>
+                                            <h5>Корм для собак "Премиум"</h5>
+                                            <p>2 × 1 200 руб.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product">
+                                        <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Ошейник">
+                                        <div>
+                                            <h5>Кожаный ошейник</h5>
+                                            <p>1 × 850 руб.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div>
+                                        <p>Сумма: 3 250 руб.</p>
+                                        <p>Доставка: бесплатно</p>
+                                    </div>
+                                    <button class="btn repeat-order">Повторить заказ</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <h4>Заказ #12344</h4>
+                                        <p>10 октября 2023</p>
+                                    </div>
+                                    <span class="order-status delivered">Доставлен</span>
+                                </div>
+                                
+                                <div class="order-products">
+                                    <div class="product">
+                                        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80" alt="Игрушка">
+                                        <div>
+                                            <h5>Резиновая игрушка "Кость"</h5>
+                                            <p>3 × 350 руб.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div>
+                                        <p>Сумма: 1 050 руб.</p>
+                                        <p>Доставка: бесплатно</p>
+                                    </div>
+                                    <button class="btn repeat-order">Повторить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Записи на услуги -->
+                    <div class="account-tab" id="appointments-tab">
+                        <h3>Предстоящие записи</h3>
+                        <div class="appointments-list">
+                            <div class="appointment-card">
+                                <div class="appointment-info">
+                                    <div class="appointment-icon">
+                                        <i class="fas fa-cut"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Груминг</h4>
+                                        <p><i class="fas fa-calendar-alt"></i> 20 октября 2023, 14:00</p>
+                                        <p><i class="fas fa-map-marker-alt"></i> Филиал на ул. Собачья, 15</p>
+                                        <p><i class="fas fa-dog"></i> Бобик (Лабрадор)</p>
+                                    </div>
+                                </div>
+                                <button class="btn cancel-appointment">Отменить</button>
+                            </div>
+                            
+                            <div class="appointment-card">
+                                <div class="appointment-info">
+                                    <div class="appointment-icon">
+                                        <i class="fas fa-stethoscope"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Ветеринарный осмотр</h4>
+                                        <p><i class="fas fa-calendar-alt"></i> 25 октября 2023, 11:30</p>
+                                        <p><i class="fas fa-map-marker-alt"></i> Филиал на ул. Кошачья, 8</p>
+                                        <p><i class="fas fa-cat"></i> Мурка (Британская)</p>
+                                    </div>
+                                </div>
+                                <button class="btn cancel-appointment">Отменить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="services.html" class="btn-large">Записаться на услугу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <!-- Тот же подвал, что на главной -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

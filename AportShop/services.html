@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | Апорт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <h1><span>А</span>порт</h1>
+                </div>
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Товары</a></li>
+                        <li><a href="services.html" class="active">Услуги</a></li>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="account.html" class="btn login-btn"><i class="fas fa-user"></i> Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Услуги -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги</h2>
+                <p>Комплексный уход для ваших питомцев</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Груминг</h3>
+                        <p>Профессиональный уход за шерстью, стрижка, купание и уход за когтями. Наши мастера работают с собаками любых пород.</p>
+                        <ul>
+                            <li>Стрижка по породе</li>
+                            <li>Гигиеническая обработка</li>
+                            <li>SPA-процедуры</li>
+                            <li>Уход за когтями и ушами</li>
+                        </ul>
+                        <p class="price">От 1500 руб.</p>
+                        <button class="btn">Записаться</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Ветеринарные услуги</h3>
+                        <p>Консультации, диагностика и лечение у квалифицированных ветеринаров. Полный спектр услуг для здоровья вашего питомца.</p>
+                        <ul>
+                            <li>Консультации специалистов</li>
+                            <li>Вакцинация</li>
+                            <li>Диагностика и анализы</li>
+                            <li>Стоматология</li>
+                        </ul>
+                        <p class="price">От 1000 руб.</p>
+                        <button class="btn">Записаться</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Дрессировка</h3>
+                        <p>Обучение основным командам, коррекция поведения и специальные курсы дрессировки с профессиональными кинологами.</p>
+                        <ul>
+                            <li>Общий курс дрессировки</li>
+                            <li>Коррекция поведения</li>
+                            <li>Подготовка к выставкам</li>
+                            <li>Специальные курсы</li>
+                        </ul>
+                        <p class="price">От 2000 руб./мес.</p>
+                        <button class="btn">Записаться</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Передержка</h3>
+                        <p>Комфортное размещение вашего питомца на время отъезда. Индивидуальные вольеры, прогулки и круглосуточный уход.</p>
+                        <ul>
+                            <li>Индивидуальные вольеры</li>
+                            <li>Регулярные прогулки</li>
+                            <li>Видеонаблюдение</li>
+                            <li>Ветеринарный контроль</li>
+                        </ul>
+                        <p class="price">От 1000 руб./сутки</p>
+                        <button class="btn">Записаться</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Диетология</h3>
+                        <p>Разработка индивидуального рациона питания, консультации по кормлению и подбор специализированных кормов.</p>
+                        <ul>
+                            <li>Составление рациона</li>
+                            <li>Подбор кормов</li>
+                            <li>Консультации по питанию</li>
+                            <li>Диеты при заболеваниях</li>
+                        </ul>
+                        <p class="price">От 1500 руб.</p>
+                        <button class="btn">Записаться</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Такси для питомцев</h3>
+                        <p>Комфортная перевозка вашего питомца в ветклинику, на выставку или домой. Специализированный транспорт с кондиционером.</p>
+                        <ul>
+                            <li>Перевозка по городу</li>
+                            <li>Транспортировка в ветклиники</li>
+                            <li>Перевозка на выставки</li>
+                            <li>Междугородние перевозки</li>
+                        </ul>
+                        <p class="price">От 500 руб.</p>
+                        <button class="btn">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-benefits">
+                <h3>Почему выбирают наши услуги?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-user-md"></i>
+                        <h4>Профессионалы</h4>
+                        <p>Все специалисты с высшим образованием и большим опытом работы</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Безопасность</h4>
+                        <p>Используем только сертифицированные препараты и оборудование</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-heart"></i>
+                        <h4>Любовь к животным</h4>
+                        <p>Каждого питомца мы принимаем с заботой и вниманием</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-ruble-sign"></i>
+                        <h4>Доступные цены</h4>
+                        <p>Предлагаем оптимальное соотношение цены и качества</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <!-- Тот же подвал, что на главной -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
